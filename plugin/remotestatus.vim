@@ -44,10 +44,10 @@ function! remotestatus#UpdateStatus(in_cb)
     let s_diverged =  get (g:, 'remote_status_diverged', '↕')
     let s_updating =  get (g:, 'remote_status_upating', '%')
   else
-    let s_uptodate =  get (g:, 'remote_status_uptodate', 'OK')
-    let s_pull =      get (g:, 'remote_status_pull', 'PL')
-    let s_push =      get (g:, 'remote_status_push', 'PS')
-    let s_diverged =  get (g:, 'remote_status_diverged', 'DV')
+    let s_uptodate =  get (g:, 'remote_status_uptodate', '👌')
+    let s_pull =      get (g:, 'remote_status_pull', '↓')
+    let s_push =      get (g:, 'remote_status_push', '↑')
+    let s_diverged =  get (g:, 'remote_status_diverged', '↕')
     let s_updating =  get (g:, 'remote_status_upating', '%')
   endif
 
