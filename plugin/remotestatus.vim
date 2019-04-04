@@ -37,19 +37,11 @@ function! remotestatus#UpdateStatus(in_cb)
   let local_branch    = '@'
   let upstream_branch = '@{u}'
 
-  if get (g:, 'webdevicons_enable', 0) || get (g:, 'remote_status_nerd_font', 0)
-    let s_uptodate =  get (g:, 'remote_status_uptodate', '👌')
-    let s_pull =      get (g:, 'remote_status_pull', '↓')
-    let s_push =      get (g:, 'remote_status_push', '↑')
-    let s_diverged =  get (g:, 'remote_status_diverged', '↕')
-    let s_updating =  get (g:, 'remote_status_upating', '%')
-  else
-    let s_uptodate =  get (g:, 'remote_status_uptodate', '👌')
-    let s_pull =      get (g:, 'remote_status_pull', '↓')
-    let s_push =      get (g:, 'remote_status_push', '↑')
-    let s_diverged =  get (g:, 'remote_status_diverged', '↕')
-    let s_updating =  get (g:, 'remote_status_upating', '%')
-  endif
+  let s_uptodate =  get (g:, 'remote_status_uptodate', '👌')
+  let s_pull =      get (g:, 'remote_status_pull', '↓')
+  let s_push =      get (g:, 'remote_status_push', '↑')
+  let s_diverged =  get (g:, 'remote_status_diverged', '↕')
+  let s_updating =  get (g:, 'remote_status_upating', '%')
 
   if exists("b:remote_status_job") && job_status(b:remote_status_job) == "run"
     let b:git_status = s_updating
